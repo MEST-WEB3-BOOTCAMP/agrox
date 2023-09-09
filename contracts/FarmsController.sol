@@ -32,8 +32,8 @@ contract FarmsController {
         emit FarmAdded(_id);
     }
 
-    function investInFarm(uint256 _farmId, uint256 _quantity) {
+    function investInFarm(uint256 _farmId, uint256 _quantity) external {
         Farm farm = farms[_farmId];
-        farm.
+        farm.buyStake(_quantity);
     }
 }
